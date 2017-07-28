@@ -89,7 +89,7 @@ MPPA-256は，市販の組込みシステム向けマルチ/メニーコアコ�
 
 \subsection{ハードウェアモデル}
 \label{sec:hardware_model}
-MPPA-256プロセッサは，16個のコンピュートクラスター（CC）及び4個のI/Oサブシステム（IOS）で構成され，これらは全てトーラス状のネットワークオンチップ（NoC）によって接続されている（図\ref{fig:mppa_architecture}と図\ref{fig:noc_map}参照）．
+MPPA-256プロセッサは，16個のコンピュートクラスタ（CC）及び4個のI/Oサブシステム（IOS）で構成され，これらは全てトーラス状のネットワークオンチップ（NoC）によって接続されている（図\ref{fig:mppa_architecture}と図\ref{fig:noc_map}参照）．
 
 \begin{figure}[t]
   \centering
@@ -118,9 +118,9 @@ DMAエンジンは，NoCルータを介したデータ通信を管理してお�
 UCは，マルチスレッドエンジンで，Txインタフェースでデータを送信するスレッドを設定するようにプログラムできる．
 設定されたパターンを使用してメモリからデータを抽出し，NoCでデータの送信を開始し，動作後は他のプロセッシングエンジン（PE）及びI/Oコアを利用することなく自律的に実行することが可能である．
 
-\subsubsection{コンピュートクラスター（CC）}
+\subsubsection{コンピュートクラスタ（CC）}
 \label{sec:cc}
-MPPA-256では，16個のコアを持つコンピュートクラスター（CC）が16個存在し，合計256のコアによって主要な処理が行われる．
+MPPA-256では，16個のコアを持つコンピュートクラスタ（CC）が16個存在し，合計256のコアによって主要な処理が行われる．
 NoC上の16個の内部ノードがCCに対応しており，図\ref{fig:mppa_architecture}は各CCのアーキテクチャを示している．
 
 \textbf{プロセッシングエンジンとリソースマネージャ}：
@@ -431,7 +431,7 @@ CC SMEMをスクラッチパッドメモリとして使用したNoCによるIOS�
 現在，多くのマルチ/メニーコアコンポーネントが開発され，様々なベンダーによってリリースされている．
 例えば，KalrayのMulti-Purpose Processing Array（MPPA）-256 \cite{de2014time}やTileraのTile-Gx \cite{ramey2011tile} \cite{schooler2010tile}，Tile64 \cite{bell2008tile64}，IntelのXeon Phi \cite{chrysos2014intel} \cite{chrysos2012intel}，Single-chip Cloud Computer（SCC）\cite{baron2010single}）等が挙げられる．
 本研究では，リアルタイム組込みアプリケーション向けに設計されたKalray MPPA-256に焦点を当てた．
-MPPA-256は，エネルギー効率の高い256個の汎用コアを内包しており，NoCベースのクラスター構造を持っていることが大きな特徴である．
+MPPA-256は，エネルギー効率の高い256個の汎用コアを内包しており，NoCベースのクラスタ構造を持っていることが大きな特徴である．
 
 MPPA-256は，コア数の拡張性と電力効率の面で，他のCOTSマルチ/メニーコアコンポーネントよりも優れている（表\ref{tb:comparison_manycore}参照）．
 他のプラットフォームとコア数を比較すると，MPPA-256は256コアであるのに対し，他のマルチ/メニーコアコンポーネントは多いものでも64コアとなっている．
