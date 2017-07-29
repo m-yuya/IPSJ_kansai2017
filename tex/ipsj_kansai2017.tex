@@ -162,6 +162,7 @@ D-NoCとC-NoCの両方で，各ネットワークノード（CCまたはIOS）�
 東西南北の4つの隣接リンク及び，及びNoCルータに接続されたローカルアドレススペースへのリンクの計５つである．
 NoCルータは，各方向でフリットをFIFOキューイングし，リンク幅は各方向4バイト幅であり，コアが600MHzまたは800MHzのCPUクロックレートで動作するため，各ノードは合計2.4GB/秒または3.2GB/秒で送受信することとなる．
 
+\vspace{-2mm}
 \subsection{ソフトウェアモデル}
 \label{sec:software_model}
 
@@ -230,6 +231,7 @@ eMCOSは分散マイクロカーネルアーキテクチャを実装しており
 % \subsubsection{Influences of Routing and Memory Type}
 % \label{sec:routing_and_memory}
 
+\vspace{-2mm}
 \subsection{行列計算}
 \label{sec:martix_eval}
 
@@ -299,7 +301,7 @@ CCのPE内の小型データキャッシュ（8KB）が十分に機能せず，�
   \begin{tabular}{cc}
     \begin{minipage}[t]{0.49\textwidth}
       \includegraphics[width=0.9\linewidth]{../figure/BarGraph_matrix_with_CCs_314.pdf}
-      % \vspace{0mm}
+      \vspace{-2mm}
       \caption{行列計算：IOS + 4 CCs（314KB 行列 \(\times\) 3）}
       \label{fig:mat_calc_offload_314}
     \end{minipage}   
@@ -307,7 +309,7 @@ CCのPE内の小型データキャッシュ（8KB）が十分に機能せず，�
     % \setcounter{figure}{11}
     \begin{minipage}[t]{0.49\textwidth}
       \includegraphics[width=0.9\linewidth]{../figure/BarGraph_matrix_with_CCs_640.pdf}
-      % \vspace{0mm}
+      \vspace{-2mm}
       \caption{行列計算：IOS + 4 CCs（640KB 行列 \(\times\) 3）}
       \label{fig:mat_calc_offload_640}
     \end{minipage}
@@ -352,10 +354,10 @@ MPPA-256の場合，NoCのデータ通信とDMAによるメモリアクセスの
 \begin{figure}[t]
   \centering
   \includegraphics[width=0.9\linewidth]{../figure/BarGraph_ndt_matching.pdf}
-  % \vspace{0mm}
+  \vspace{-2mm}
   \caption{\label{fig:ndt_matching}
   MPPA-256による自動運転システムの自己位置推定処理の並列化}
-  % \vspace{0mm}
+  \vspace{-2mm}
 \end{figure}
 
 
@@ -514,6 +516,10 @@ MPPA-256のNoCによるデータ転送やNoCの保証するサービスについ
 これらの実験結果は，システム設計者が適切な設計を行う手助けとなり，実アプリケーションの並列化はNoCベースの組込み向けNUMAメニーコアプラットフォームの実用性を実証している．
 
 今後の研究では，メニーコア上で参考文献\cite{maruyama2016ros2}等のリアルタイムシステムソフトウェアを設計することや\ref{sec:practical_application}節で挙げた最近傍探索等の大容量データを扱うアルゴリズムの並列化が挙げられる．
+
+\section*{謝辞}
+本研究の一部はトヨタ自動車とイーソルの支援により実施された．
+\vspace{-2mm}
 
 % %%%%%%%%%%%% Reference %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{ipsj_v2/UTF8/ipsjunsrt-e}
